@@ -1,0 +1,12 @@
+<div class="card mt-3" [ngClass]="{'bg-success':singleTodo.status,'text-white':singleTodo.status}">
+    <div class="card-body">
+        <h3>{{singleTodo.title}}</h3>
+        <p >{{singleTodo.content | slice:5:150}}...</p>
+        <b>{{singleTodo.status?'DONE':"NOT DONE"}}</b>
+        <div class="container text-center">
+            <button class="btn btn-primary btn-sm" [routerLink]="['/todo',singleTodo.id]">VIEW</button>
+            <button class="btn ms-1 btn-warning btn-sm" [routerLink]="['/update-todo',singleTodo.id]">UPDATE</button>
+            <button class="btn ms-1 btn-danger btn-sm" [routerLink]="['/delete']" (click)="deleteMyTodo(singleTodo.id)">DELETE</button>
+        </div>
+    </div>
+</div>

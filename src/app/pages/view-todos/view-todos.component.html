@@ -1,0 +1,22 @@
+<div class="container">
+    <div class="row mt-3">
+       <div class="col-md-8 offset-md-2">
+
+        <h3>All todos are here</h3>
+
+        <div class="alert alert-danger text-center" *ngIf="todos.length<=0">
+            <h3>No todos are there in the list</h3>
+            <b>Start adding new todos</b>
+            <br>
+            <button class="btn mt-2 btn-primary" [routerLink]="['/add-todo']">
+                Add New Todo
+            </button>
+        </div>
+
+        <app-todo-list-view *ngFor="let todo of todos" [singleTodo]="todo"> </app-todo-list-view> <!--whatever data in todo i trnsfer in single todo to transfer its child-->
+        
+       
+    </div>
+
+    </div>
+</div>

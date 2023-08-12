@@ -1,0 +1,39 @@
+/* ... Other CSS styles ... */
+
+.about-section {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+  
+  .about-content {
+    max-width: 800px;
+    margin: 20px;
+    text-align: center;
+  }
+  
+  .about-image img {
+    width: 30%;
+    height: 50%;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    margin-left:550px ;
+    margin-top: 15px;
+  }
+  
+  /* Animation */
+  @keyframes fadeInUp {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .about-content {
+    animation: fadeInUp 1s ease-in-out;
+  }
+  
